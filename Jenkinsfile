@@ -11,7 +11,7 @@ pipeline{
                 script{
                     withSonarQubeEnv(credentialsId: 'sonar_token', installationName: 'sonarserver') {
                         sh 'chmod +x gradlew'
-                        sh './gradlew --info sonarqube'
+                        sh './gradlew --build-cache sonarqube'
                     }          
                 }   
             }
