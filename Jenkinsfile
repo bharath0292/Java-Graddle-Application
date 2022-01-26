@@ -7,7 +7,6 @@ pipeline{
                     withSonarQubeEnv(credentialsId: 'sonar_token', installationName: 'sonarserver') {
                         sh 'chmod +x gradlew'
                         sh './gradlew --build-cache --warning-mode all --info sonarqube'
-                        sh "../../../sonar-scanner-2.9.0.670/bin/sonar-scanner"
                     }
 
                     timeout(time: 1, unit: 'HOURS') {
