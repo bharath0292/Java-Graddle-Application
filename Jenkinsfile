@@ -61,7 +61,7 @@ pipeline{
                 }
             }
         }
-        stage('Deploying application on k8s cluster' ) {
+        stage('Deploying application on k8s cluster') {
             steps {
                 script{
                     dir('kubernetes/'){
