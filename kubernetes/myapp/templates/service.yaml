@@ -11,7 +11,5 @@ spec:
       targetPort: 8080
       protocol: TCP
       name: http
-    externalIPs:
-      - 34.69.246.139
   selector:
     {{- include "myapp.selectorLabels" . | nindent 4 }}
