@@ -8,8 +8,10 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.port }}
+      targetPort: 8080
       protocol: TCP
       name: http
+    externalIPs:
+      - 34.69.246.139
   selector:
     {{- include "myapp.selectorLabels" . | nindent 4 }}
