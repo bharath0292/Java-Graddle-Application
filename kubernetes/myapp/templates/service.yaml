@@ -11,7 +11,5 @@ spec:
       targetPort: 8080
       protocol: TCP
       name: http
-  imagePullSecrets:
-    - name: registry-secret
   selector:
     {{- include "myapp.selectorLabels" . | nindent 4 }}
